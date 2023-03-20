@@ -1,0 +1,12 @@
+set confirm off
+set architecture riscv:rv64
+target remote 127.0.0.1:26000
+symbol-file kernel/kernel
+set disassemble-next-line auto
+set riscv use-compressed-breakpoints yes
+#file user/_mp1-part2-0
+#b main
+#b s3
+#b thread_yield
+#b dispatch
+#c
